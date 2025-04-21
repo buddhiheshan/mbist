@@ -3,7 +3,6 @@ module multiplexer #(
 ) (
     input logic [WIDTH-1:0] normal_in, bist_in,
     input logic NbarT,
-
     output logic [WIDTH-1:0] out
 );
 
