@@ -1,10 +1,13 @@
 module multiplexer_tb ();
-    logic [9:0] normal_in, bist_in, out;
+
+    `define WIDTH 10
+
+    logic [`WIDTH-1:0] normal_in, bist_in, out;
     logic NbarT;
 
-    multiplexer #(.WIDTH(10)) dut(.normal_in(normal_in), .bist_in(bist_in), .out(out), .NbarT(NbarT));
+    multiplexer #(.WIDTH(`WIDTH)) dut(.normal_in(normal_in), .bist_in(bist_in), .out(out), .NbarT(NbarT));
 
-    task check_output(logic [9:0] expected_output);
+    task check_output(logic [`WIDTH-1:0] expected_output);
         if (out === expected_output) begin
             $display("PASS\tTime=%0t\t Expected: out=%b | Got: out=%b", $time, expected_output, out);
         end
