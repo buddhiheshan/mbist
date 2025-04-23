@@ -3,3 +3,8 @@ verdi_config_file
 csrc/*
 ucli.key
 simv.daidir
+verdiLog
+inter.fsdb
+novas_dump.log
+novas.conf
+novas.rc
