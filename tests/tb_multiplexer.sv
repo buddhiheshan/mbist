@@ -1,4 +1,4 @@
-module multiplexer_tb ();
+module tb_multiplexer();
 
     `define WIDTH 10
 

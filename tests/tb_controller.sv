@@ -1,4 +1,4 @@
-module controller_tb();
+module tb_controller();
 
     import controller_fsm_pkg::*;
     

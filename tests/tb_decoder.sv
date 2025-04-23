@@ -1,4 +1,4 @@
-module decoder_tb ();
+module tb_decoder();
     logic [2:0] q;
     logic [7:0] data_t;
 
