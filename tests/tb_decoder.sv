@@ -26,9 +26,12 @@ module tb_decoder();
     endfunction
 
     initial begin
-        repeat (10) begin
-            void'(std::randomize(q));
+        #1 check_output();
+
+        #1 q = 0;
+        repeat (8) begin
             #1 check_output();
+            #1 q = q + 1;
         end
         $finish;
 
