@@ -1,13 +1,13 @@
 module counter #(
-    parameter length = 10
+    parameter LENGTH = 10
 ) (
-    input logic [length-1:0] d_in,
+    input logic [LENGTH-1:0] d_in,
     input logic clk, ld, u_d, cen,
-    output logic [length-1:0] q,
+    output logic [LENGTH-1:0] q,
     output logic cout
 );
 
-logic [length-1:0] count;
+logic [LENGTH-1:0] count;
 
 assign q = count;
 
@@ -18,7 +18,7 @@ always_ff @( posedge clk ) begin
             count <= d_in;
         else begin
             if (u_d) begin
-                if (count === {length{1'b1}}) cout <= 1'b1;
+                if (count === {LENGTH{1'b1}}) cout <= 1'b1;
                 count <= count + 1;
             end
             else begin
