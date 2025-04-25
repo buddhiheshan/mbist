@@ -1,13 +1,9 @@
-package controller_fsm_pkg;
-    typedef enum logic { RESET, TEST } state_t;
-endpackage
-
 module controller(
     input logic start, rst, clk, cout,
     output logic NbarT, ld
 );
 
-import controller_fsm_pkg::*;
+typedef enum logic { RESET, TEST } state_t;
 
 state_t state, next_state;
 
