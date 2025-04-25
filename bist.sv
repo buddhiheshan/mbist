@@ -1,10 +1,3 @@
-// `include "./controller.sv"
-// `include "./counter.sv"
-// `include "./decoder.sv"
-// `include "./comparator.sv"
-// `include "./multiplexer.sv"
-// `include "./sram.sv"
-
 module bist #(
     parameter SIZE = 6,
     parameter LENGTH = 8
