@@ -16,7 +16,7 @@ logic [7:0] data_t;
 logic [9:0] q;
 
 controller controller(.start(start), .rst(rst), .clk(clk), .cout(cout), .NbarT(NbarT), .ld(ld));
-counter #(.LENGTH(10)) counter(.d_in(0), .clk(clk), .ld(ld), .u_d(1), .cen(1), .q(q), .cout(cout));
+counter #(.LENGTH(10)) counter(.d_in(0), .clk(clk), .ld(ld), .u_d(1'b1), .cen(1'b1), .q(q), .cout(cout));
 decoder decoder(.q(q[9:7]), .data_t(data_t));
 comparator comparator(.data_t(data_t), .ramout(dataout), .gt(), .eq(eq), .lt());
 
